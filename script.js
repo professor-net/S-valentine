@@ -1,8 +1,8 @@
 document.getElementById("magicButton").addEventListener("click", function() {
-    // Shake the screen
+    // Shake effect
     document.body.style.animation = "shake 0.5s";
 
-    // Show the message
+    // Show love message
     let message = document.getElementById("message");
     message.classList.remove("hidden");
     setTimeout(() => message.style.opacity = 1, 100);

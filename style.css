@@ -1,44 +1,70 @@
+/* Full-screen romantic background */
 body {
     text-align: center;
-    font-family: 'Arial', sans-serif;
-    background-color: #ffebf3;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(to bottom right, #ff66b2, #ffccff, #6600cc);
     overflow: hidden;
     position: relative;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Centered container */
 .container {
-    margin-top: 50px;
+    z-index: 2;
 }
 
+/* Greeting text */
 h1 {
-    font-size: 40px;
-    color: #e60073;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 10px pink, 0 0 20px red;
+    animation: glow 1.5s infinite alternate;
 }
 
+/* Glowing effect */
+@keyframes glow {
+    from { text-shadow: 0 0 10px pink, 0 0 20px red; }
+    to { text-shadow: 0 0 20px white, 0 0 30px pink; }
+}
+
+/* Button styling */
 button {
-    background-color: #ff4d94;
+    background: #ff0066;
     border: none;
     padding: 15px 30px;
-    font-size: 20px;
+    font-size: 24px;
+    font-family: 'Indie Flower', cursive;
     color: white;
-    border-radius: 10px;
+    border-radius: 50px;
     cursor: pointer;
     margin-top: 20px;
+    box-shadow: 0 0 10px white;
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #e60073;
+    background: #cc0052;
+    transform: scale(1.1);
 }
 
+/* Message box */
 #message {
     font-size: 30px;
     font-weight: bold;
-    color: #ff0066;
+    color: white;
     margin-top: 30px;
+    text-shadow: 0 0 10px white;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    font-family: 'Indie Flower', cursive;
 }
 
+/* Hidden class */
 .hidden {
     display: none;
 }
@@ -51,11 +77,11 @@ button:hover {
     75% { transform: translateX(-10px); }
 }
 
-/* Floating hearts animation */
+/* Floating hearts */
 .heart {
     position: absolute;
-    color: red;
     font-size: 30px;
+    color: red;
     animation: floatUp 4s linear infinite;
 }
 
@@ -64,17 +90,10 @@ button:hover {
     100% { transform: translateY(-800px); opacity: 0; }
 }
 
-/* Floating balloons animation */
+/* Floating balloons */
 .balloon {
     position: absolute;
     width: 30px;
     height: 50px;
     background-color: pink;
-    border-radius: 50%;
-    animation: floatBalloon 6s linear infinite;
-}
-
-@keyframes floatBalloon {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-900px); opacity: 0; }
-}
+    border-ra
