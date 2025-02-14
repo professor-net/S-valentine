@@ -1,0 +1,80 @@
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffebf3;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #e60073;
+}
+
+button {
+    background-color: #ff4d94;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e60073;
+}
+
+#message {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff0066;
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Screen shake animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+}
+
+/* Floating hearts animation */
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    animation: floatUp 4s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-800px); opacity: 0; }
+}
+
+/* Floating balloons animation */
+.balloon {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background-color: pink;
+    border-radius: 50%;
+    animation: floatBalloon 6s linear infinite;
+}
+
+@keyframes floatBalloon {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-900px); opacity: 0; }
+}
